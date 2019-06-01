@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MarsAPI3.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -26,6 +27,8 @@ namespace MarsAPI3
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // DEPLOYMENT IN GOOGLE CLOUD
+
             /*
             services.AddDbContext<MarsContext>(
                 options => options.UseMySQL(
@@ -34,6 +37,14 @@ namespace MarsAPI3
                 //options => options.UseMy
             );
             */
+
+            // GOOGLE SIGN IN
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
+                options.Authority = "https://myaccount.google.com/";
+                options.Audience = "211560243540-0eicjiisai5u7cgv9qjdp71ahf0e4tvq.apps.googleusercontent.com";
+            });
+
             services.AddDbContext<MarsContext>(
                options => options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection")
@@ -60,6 +71,7 @@ namespace MarsAPI3
                    .AllowAnyMethod()
                    .AllowAnyHeader());
 
+            app.UseAuthentication();
             app.UseMvc();
         }
     }
