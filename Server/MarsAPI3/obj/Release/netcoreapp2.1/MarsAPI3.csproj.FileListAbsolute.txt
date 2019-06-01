@@ -1,0 +1,14 @@
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\bin\Release\netcoreapp2.1\MarsAPI3.deps.json
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\bin\Release\netcoreapp2.1\MarsAPI3.runtimeconfig.json
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\bin\Release\netcoreapp2.1\MarsAPI3.runtimeconfig.dev.json
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\bin\Release\netcoreapp2.1\MarsAPI3.dll
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\bin\Release\netcoreapp2.1\MarsAPI3.pdb
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.csprojAssemblyReference.cache
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.csproj.CoreCompileInputs.cache
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.RazorAssemblyInfo.cache
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.RazorAssemblyInfo.cs
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.AssemblyInfoInputs.cache
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.AssemblyInfo.cs
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.RazorTargetAssemblyInfo.cache
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.dll
+C:\Users\waute\OneDrive\Documenten\Angular\MarsAPI3\MarsAPI3\obj\Release\netcoreapp2.1\MarsAPI3.pdb
