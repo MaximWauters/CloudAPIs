@@ -17,9 +17,9 @@ namespace MarsAPI3.Controllers
             _context = ctxt;
         }
 
-
+        // GET alle foto's
         [HttpGet]
-        public List<Photo> GetBooks()
+        public List<Photo> GetPhoto()
         {
             return _context.photo.ToList();
 
@@ -38,6 +38,7 @@ namespace MarsAPI3.Controllers
             return thePhoto;
         }
 
+        // POST nieuwe foto
         [HttpPost]
         public ActionResult<Photo> AddPhoto([FromBody]Photo photo)
         {
@@ -50,6 +51,7 @@ namespace MarsAPI3.Controllers
             return Created("", photo);
         }
 
+        // Update foto
         [HttpPut]
         public ActionResult<Photo> UpdatePhoto([FromBody]Photo photo)
         {
@@ -60,6 +62,7 @@ namespace MarsAPI3.Controllers
             return Created("", photo);
         }
 
+        // Delete de foto adhv de id
         [Route("{id}")]
         [HttpDelete]
         public IActionResult DeletePhoto(int id)

@@ -28,7 +28,6 @@ namespace MarsAPI3
         public void ConfigureServices(IServiceCollection services)
         {
             // DEPLOYMENT IN GOOGLE CLOUD
-
             /*
             services.AddDbContext<MarsContext>(
                 options => options.UseMySQL(
@@ -39,12 +38,12 @@ namespace MarsAPI3
             */
 
             // GOOGLE SIGN IN
-
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options => {
                 options.Authority = "https://myaccount.google.com/";
                 options.Audience = "211560243540-0eicjiisai5u7cgv9qjdp71ahf0e4tvq.apps.googleusercontent.com";
             });
 
+            // SQL Server
             services.AddDbContext<MarsContext>(
                options => options.UseSqlServer(
                    Configuration.GetConnectionString("DefaultConnection")
@@ -62,10 +61,10 @@ namespace MarsAPI3
                 app.UseDeveloperExceptionPage();
             }
 
+            // Init db
             DBInitialiser.Initialize(context);
 
             // CORS
-
             app.UseCors(options =>
             options.AllowAnyOrigin()
                    .AllowAnyMethod()
