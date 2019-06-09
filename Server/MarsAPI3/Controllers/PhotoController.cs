@@ -59,7 +59,8 @@ namespace MarsAPI3.Controllers
             _context.photo.Update(photo);
             _context.SaveChanges();
             //return boek met ID
-            return Created("", photo);
+            // return Created("", photo);
+            return Ok();
         }
 
         // Delete de foto adhv de id
