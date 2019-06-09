@@ -1,0 +1,35 @@
+<img class="galleryBKimg" src="assets/planet.jpg">
+<div class="container">
+    <div class="row">
+      <div class="col-sm" id="col1" style="overflow-y:scroll; height: 800px;">
+          <h1 style="text-align: center"><strong>Mijn Foto's</strong></h1>
+          <ul class="list-group" *ngFor="let p of photos">
+              <li class="list-group-item"><strong>{{p.title}}</strong></li>
+              <li class="list-group-item">{{p.description}}</li>
+              <li class="list-group-item"><img src="{{p.url}}" width="100%" height="100%"></li>
+              <li class="list-group-item"><button (click)="DeleteFoto(p.id)" mdbBtn color="danger" mdbWavesEffect>Delete foto</button><button (click)="UpdateFoto(p.id)" mdbBtn color="danger" mdbWavesEffect>Update foto</button></li>
+              
+          </ul>
+      </div>
+      <div class="col-sm">
+        <br><br>
+          <ul class="list-group" >
+              <li class="list-group-item"><input type="text" [(ngModel)]="title"> title</li>
+              <li class="list-group-item"><input type="text" [(ngModel)]="description"> description</li>
+              <li class="list-group-item"><input type="text" [(ngModel)]="url"> url</li>
+              <br>
+              <button (click)="VoegToe()" mdbBtn color="danger" mdbWavesEffect>Voeg een foto toe</button>
+          </ul>
+          <br><br>
+          <ul class="list-group" *ngIf="photo">
+              <li class="list-group-item"><input type="text" [(ngModel)]="title" value="test"> title</li>
+              <li class="list-group-item"><input type="text" [(ngModel)]="description"> description</li>
+              <li class="list-group-item"><input type="text" [(ngModel)]="url"> url</li>
+              <br>
+              <button (click)="VoegHemToe()" mdbBtn color="danger" mdbWavesEffect>Update foto</button>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+

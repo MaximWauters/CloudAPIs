@@ -1,0 +1,42 @@
+<!--Navbar-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark purple lighten-1" [containerInside]="false">
+
+  <!-- Navbar brand -->
+  <mdb-navbar-brand><a class="navbar-brand" href="#">MARS ROVER PROJECT</a></mdb-navbar-brand>
+
+  <!-- Collapsible content -->
+  <links>
+
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" [routerLinkActive]="['active']">
+        <a [routerLink]="['/home']" class="nav-link waves-light" mdbRippleRadius>Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a [routerLink]="['/gallery']" class="nav-link waves-light" mdbRippleRadius>Gallery</a>
+      </li>
+      <li class="nav-item" [routerLinkActive]="['active']">
+        <a [routerLink]="['/list']" class="nav-link waves-light" mdbRippleRadius>My Photo List</a>
+      </li>
+
+    </ul>
+    <!-- Links -->
+
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a *ngIf="userPostData.name" class="nav-link">Welcome {{userPostData.name}} !<mdb-icon fas icon="build"></mdb-icon></a>
+      </li>
+      <li class="nav-item avatar dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          <img *ngIf="userPostData.name" src="{{userPostData.provider_pic}}" alt="" class="img-fluid rounded-circle z-depth-0" width="50%" height="50%"></a>
+        <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+          <a *ngIf="!userPostData.name"(click)="socialSignIn('google')" class="dropdown-item waves-light" mdbWavesEffect href="#">Log in</a>
+          <a *ngIf="userPostData.name" class="dropdown-item waves-light" mdbWavesEffect href="#">Log out</a>
+        </div>
+      </li>
+    </ul>
+  </links>
+  <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->

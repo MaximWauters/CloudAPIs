@@ -1,0 +1,14 @@
+<div  id="test">
+  <input type="text" [(ngModel)]="findDate">
+  <button (click)="doSearch()" mdbBtn color="danger" mdbWavesEffect>find pictures by date</button>
+    <div *ngFor="let c of photos.photos;">
+        <ul class="list-group" style="max-width: 400px;">
+            <li class="list-group-item"><strong>ingegeven datum: {{c.earth_date}}</strong></li>
+            <li class="list-group-item">naam rover: {{c.rover.name}}</li>
+            <li class="list-group-item">id van de foto: {{c.id}}</li>
+            <li class="list-group-item" style="word-wrap: break-word">url van de foto: {{c.img_src}}</li>
+            <li class="list-group-item"><img width="200px" height="200px" src="{{c.img_src}}"></li>
+        </ul>
+    </div>
+</div>
+<br><br>

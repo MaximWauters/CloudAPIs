@@ -1,0 +1,30 @@
+<img class="galleryBKimg" src="assets/rover.jpg">
+<br><br>
+
+<div class="container">
+    <div class="row">
+        <div class="col" id="col1" style="overflow-y:scroll; height: 800px;">
+          <h1 style="text-align: center"><strong>Alle Foto's</strong></h1>
+            <div *ngFor="let p of datas.photos" >
+              <ul class="list-group" style="max-width: 500px; white-space: initial;">
+                <li class="list-group-item">datum van de foto:      {{p.earth_date}}</li>
+                <li class="list-group-item">naam rover:             {{p.rover.name}}</li>
+                <li class="list-group-item">id van de foto:         {{p.id}}</li>
+                <li class="list-group-item">naam van de camera:     {{p.camera.full_name}}</li>
+                <li class="list-group-item" style="word-wrap: break-word">url van de foto:        {{p.img_src}}</li>
+                <li class="list-group-item"><img class="listImg" width="200px" height="200px" src="{{p.img_src}}"></li>
+              </ul>
+              <br>
+            </div>
+          <br>
+          <button (click)="prev()" mdbBtn color="danger" mdbWavesEffect>previos</button>
+          <button (click)="next()" mdbBtn color="danger" mdbWavesEffect>next</button>
+        </div>
+
+        <div class="col">
+          <h1 style="text-align: center" ><strong>Per datum</strong></h1>
+          <app-date></app-date>
+        </div>
+    </div>
+  </div>
+  
