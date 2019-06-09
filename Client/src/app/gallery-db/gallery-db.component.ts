@@ -42,6 +42,10 @@ export class GalleryDbComponent implements OnInit {
       this.photos.push(photo);
     })
 
+    this.title = "";
+    this.description = "";
+    this.url = "";            // maak tekstvakken terug leeg naar toevoegen
+
     this.getPhotos(); // Door deze GET uit te voeren zien we de toegevoegde record uit de db in de client direct
   }
 
